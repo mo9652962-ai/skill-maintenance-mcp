@@ -24,7 +24,7 @@ jobs:
         run: uv sync --extra dev
 
       - name: Run tests
-        run: uv run pytest -q --cov=skill_maintenance_mcp --cov-report=term-missing
+        run: uv run pytest -q --cov=skill_maintenance_mcp --cov-report=term-missing --cov-fail-under=88
 
   deps-audit:
     runs-on: ubuntu-latest
