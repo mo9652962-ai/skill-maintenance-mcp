@@ -36,7 +36,7 @@ def log_decision(
     log_path = Path(skill_path) / "references" / "decision-log.md"
     log_path.parent.mkdir(parents=True, exist_ok=True)
 
-    today = datetime.date.today().isoformat()
+    today = datetime.datetime.now().astimezone().date().isoformat()
     entry_lines = [f"## {today} — {title.strip()}"]
     entry_lines += [f"- **{FIELD_LABELS[f]}**：{str(values[f]).strip()}" for f in REQUIRED_FIELDS]
     entry = "\n".join(entry_lines) + "\n"

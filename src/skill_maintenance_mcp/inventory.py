@@ -50,7 +50,7 @@ def backup_skills(skills_root: str, skill_names: list[str], backup_root: str | N
     """改前备份: cp 技能目录到 <backup_root|~/.agents/skill-backups>/YYYY-MM-DD/。"""
     root = Path(skills_root)
     dest_root = Path(backup_root) if backup_root else Path.home() / ".agents" / "skill-backups"
-    day_dir = dest_root / datetime.date.today().isoformat()
+    day_dir = dest_root / datetime.datetime.now().astimezone().date().isoformat()
     day_dir.mkdir(parents=True, exist_ok=True)
 
     backed_up, errors = [], []

@@ -26,6 +26,20 @@ jobs:
       - name: Run tests
         run: uv run pytest -q --cov=skill_maintenance_mcp --cov-report=term-missing --cov-fail-under=88
 
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: astral-sh/setup-uv@d4b2f3b6ecc6e67c4457f6d3e41ec42d3d0fcb86 # v5
+        with:
+          enable-cache: true
+      - name: Sync dependencies
+        run: uv sync --extra dev
+      - name: Ruff（lint + 格式静态检查）
+        run: uv run ruff check src tests
+      - name: Bandit（安全静态扫描，跳过测试断言 B101）
+        run: uv run bandit -r src -q --skip B101
+
   deps-audit:
     runs-on: ubuntu-latest
     steps:

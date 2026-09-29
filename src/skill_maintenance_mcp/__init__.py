@@ -5,4 +5,4 @@ from .decisions import log_decision, read_decisions
 from .inventory import backup_skills, validate_skill
 
 __version__ = "0.1.0"
-__all__ = ["scan_paths", "log_decision", "read_decisions", "backup_skills", "validate_skill", "__version__"]
+__all__ = ["__version__", "backup_skills", "log_decision", "read_decisions", "scan_paths", "validate_skill"]
