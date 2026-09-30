@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "skill-maintenance-mcp"
-version = "0.1.1"
+version = "0.1.2"
 description = "技能库维护 MCP server：损坏扫描/备份/决策日志/体检（skill-evolution 机械环节工具化）"
 readme = "README.md"
 requires-python = ">=3.10"

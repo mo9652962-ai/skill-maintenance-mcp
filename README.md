@@ -1,5 +1,7 @@
 # skill-maintenance-mcp
 
+<!-- mcp-name: io.github.mo9652962-ai/skill-maintenance-mcp -->
+
 技能库维护 MCP server：把 [skill-evolution] 技能的**机械环节**（备份 / 损坏扫描 / 决策日志 / 体检）固化成 5 个 MCP 工具，供任意 MCP 客户端调用。蒸馏、修剪等**判断力环节仍在技能侧**，本仓库只负责不会走样、不该被跳过的部分。
 
 ## 背景

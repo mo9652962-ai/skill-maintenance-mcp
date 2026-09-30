@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.mo9652962-ai/skill-maintenance-mcp",
+  "title": "Skill Maintenance",
+  "description": "技能库维护 MCP server：损坏扫描/改前备份/决策日志/体检（skill-evolution 机械环节工具化），uvx 一行接入",
+  "version": "0.1.2",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "skill-maintenance-mcp",
+      "version": "0.1.2",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
