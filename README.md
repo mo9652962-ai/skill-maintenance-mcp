@@ -1,8 +1,59 @@
-# skill-maintenance-mcp
+<div align="center">
+
+  <img src="docs/images/brand-mark.png" alt="Skill Maintenance MCP" width="110">
+
+  # SKILL MAINTENANCE MCP
+
+  **修订前必备份 · 写入后必扫描 · 决策必留痕 · 定期体检**
+
+  **skill-maintenance-mcp 把 [skill-evolution] 技能的机械环节（备份 / 损坏扫描 / 决策日志 / 体检）固化成 5 个 MCP 工具。蒸馏、修剪等判断力环节仍在技能侧——本仓库只负责不会走样、不该被跳过的部分。已上架 [MCP Registry](https://registry.modelcontextprotocol.io)。**
+
+  <p>
+    <a href="README.en.md">English</a>
+    ·
+    <a href="#-工具详解">📐 工具详解</a>
+    ·
+    <a href="CHANGELOG.md">CHANGELOG</a>
+    ·
+    <a href="https://registry.modelcontextprotocol.io">MCP Registry</a>
+    ·
+    <a href="LICENSE">MIT</a>
+  </p>
+
+  <p>
+    <a href="https://github.com/mo9652962-ai/skill-maintenance-mcp/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/mo9652962-ai/skill-maintenance-mcp/ci.yml?style=flat-square&label=CI" alt="CI"></a>
+    <a href="https://github.com/mo9652962-ai/skill-maintenance-mcp/actions/workflows/codeql.yml"><img src="https://img.shields.io/github/actions/workflow/status/mo9652962-ai/skill-maintenance-mcp/codeql.yml?style=flat-square&label=CodeQL" alt="CodeQL"></a>
+    <a href="https://pypi.org/project/skill-maintenance-mcp/"><img src="https://img.shields.io/pypi/v/skill-maintenance-mcp?style=flat-square&color=2563EB" alt="PyPI"></a>
+    <img src="https://img.shields.io/pypi/dm/skill-maintenance-mcp?style=flat-square&label=downloads" alt="downloads">
+    <a href="LICENSE"><img src="https://img.shields.io/github/license/mo9652962-ai/skill-maintenance-mcp?style=flat-square" alt="MIT"></a>
+    <img src="https://img.shields.io/badge/MCP_Registry-listed-a78bfa?style=flat-square" alt="MCP Registry">
+    <img src="https://img.shields.io/badge/coverage-100%25-success?style=flat-square" alt="coverage">
+  </p>
+</div>
+
+<div align="center">
+  <img src="docs/images/banner-1200x630.png" alt="SKILL MAINTENANCE MCP · 技能库维护 MCP" width="100%">
+</div>
+
+<div align="center">
+  <img src="docs/images/demo.gif" alt="skill-maintenance-mcp 5 工具演示：备份 / 损坏扫描 / 决策日志 / 体检" width="92%">
+  <p><sub>▲ 5 个 MCP 工具 · 覆盖率 100% · <a href="https://pypi.org/project/skill-maintenance-mcp/">PyPI</a> / <a href="https://registry.modelcontextprotocol.io">MCP Registry</a> 双上架</sub></p>
+</div>
+
+<div align="center">
+
+### ⭐ 如果 skill-maintenance-mcp 对你有帮助，点个 Star 就是最大的支持
+
+[![GitHub stars](https://img.shields.io/github/stars/mo9652962-ai/skill-maintenance-mcp?style=social)](https://github.com/mo9652962-ai/skill-maintenance-mcp/stargazers)
+[![GitHub License](https://img.shields.io/github/license/mo9652962-ai/skill-maintenance-mcp?style=flat-square)](LICENSE)
+[![CI](https://img.shields.io/github/actions/workflow/status/mo9652962-ai/skill-maintenance-mcp/ci.yml?style=flat-square)](https://github.com/mo9652962-ai/skill-maintenance-mcp/actions)
+[![GitHub Release](https://img.shields.io/github/v/release/mo9652962-ai/skill-maintenance-mcp?style=flat-square)](https://github.com/mo9652962-ai/skill-maintenance-mcp/releases)
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mo9652962-ai/skill-maintenance-mcp&type=Date)](https://star-history.com/#mo9652962-ai/skill-maintenance-mcp&Date)
+
+</div>
 
 <!-- mcp-name: io.github.mo9652962-ai/skill-maintenance-mcp -->
-
-技能库维护 MCP server：把 [skill-evolution] 技能的**机械环节**（备份 / 损坏扫描 / 决策日志 / 体检）固化成 5 个 MCP 工具，供任意 MCP 客户端调用。蒸馏、修剪等**判断力环节仍在技能侧**，本仓库只负责不会走样、不该被跳过的部分。
 
 ## 背景
 
@@ -22,7 +73,7 @@ skill-evolution 技能沉淀了一套技能维护方法论：修订前必备份�
 | `skill_read_decisions` | §2 | 条目标题列表，修订前先看防重复踩坑 |
 | `skill_validate` | §3/§4 体检 | frontmatter 必填 + 损坏扫描 + 孤儿 reference（未挂链=不可发现）+ decision-log 概要 |
 
-## 快速开始
+## 🚀 快速开始
 
 无需克隆仓库，uvx 直接运行（入口名 `skill-maintenance-mcp`，见 pyproject 的 `[project.scripts]`）：
 
@@ -51,10 +102,10 @@ ZCode 客户端注册（`~/.zcode/cli/config.json` → `mcp.servers`）：
 git clone https://github.com/mo9652962-ai/skill-maintenance-mcp
 cd skill-maintenance-mcp
 uv venv && uv pip install -e ".[dev]"
-uv run pytest -q    # 18 例；含对真实技能库的只读联动测试（无技能库环境自动 skip）
+uv run pytest -q    # 33 例；含对真实技能库的只读联动测试（无技能库环境自动 skip）
 ```
 
-## 工具详解
+## 📐 工具详解
 
 以下参数表与 `src/skill_maintenance_mcp/server.py` 的实际工具签名一一核对，非文档虚构。「必填」指 MCP 调用时无默认值的参数。
 
@@ -116,7 +167,7 @@ uv run pytest -q    # 18 例；含对真实技能库的只读联动测试（无�
 
 返回 `{ok, skill, frontmatter, missing_frontmatter, orphan_references, corruption, decision_log}`；`ok` 为 false 时优先看 `missing_frontmatter` 与 `corruption.issues`。
 
-## decision-log 四字段格式
+## 📝 decision-log 四字段格式
 
 `skill_log_decision` 写入 `references/decision-log.md` 的条目格式（记「为什么改」，让未来 agent 不重新推导）：
 
@@ -128,12 +179,12 @@ uv run pytest -q    # 18 例；含对真实技能库的只读联动测试（无�
 - **结果**：接受/拒绝 + 原因
 ```
 
-## 两条铁律
+## ⚖️ 两条铁律
 
 1. **修订前必备份**：动任何技能文件前先 `skill_backup`；备份目录是快照语义，工具会拒绝同日同名覆盖。
 2. **每次写入/修订后必跑损坏扫描**：技能文件多为 JSON 序列化落盘，转义被解释的 formfeed / 真 tab / 行中 CR 肉眼难辨，`skill_scan_corruption` 必须收尾。
 
-## 推荐工作流（agent 修订技能时）
+## 🔁 推荐工作流（agent 修订技能时）
 
 ```
 skill_backup → 修订 → skill_scan_corruption → skill_log_decision → skill_validate
@@ -141,16 +192,16 @@ skill_backup → 修订 → skill_scan_corruption → skill_log_decision → ski
 
 修订前可先 `skill_read_decisions` 看历史决策。
 
-## 设计边界
+## 🧩 设计边界
 
 - **不做自动字节修复**：修复需要人工判断正确序列（skill-evolution §7 的修复是逐案例的），工具只定位到行号 + kind + snippet。
 - **备份默认拒绝同日覆盖**：改两次时手动挪走第一份，防止快照语义被静默破坏。
 - **不引 yaml 依赖**：frontmatter 用极简顶层 `key: value` 解析，覆盖技能文件的常见写法。
 - 上游技能：`~/.agents/skills/skill-evolution/SKILL.md`；骨架方法见 `mcp-server-craft` 技能。
 
-## 版本与变更
+## 📦 版本与变更
 
-版本历史见 [CHANGELOG.md](./CHANGELOG.md)（Keep a Changelog 格式 + 语义化版本，当前 `[Unreleased]` / `[0.1.0] - 2026-09-28`）。
+版本历史见 [CHANGELOG.md](./CHANGELOG.md)（Keep a Changelog 格式 + 语义化版本）。
 
 ## License
 
