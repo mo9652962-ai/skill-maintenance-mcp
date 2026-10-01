@@ -206,3 +206,7 @@ skill_backup → 修订 → skill_scan_corruption → skill_log_decision → ski
 ## License
 
 [MIT](./LICENSE)
+
+---
+
+📌 **更多**：[作者仓库矩阵](https://github.com/mo9652962-ai)（墨题刷题机 / 第二大脑 / 安全三部曲 / 孵化线）
