@@ -203,9 +203,11 @@ skill_backup → 修订 → skill_scan_corruption → skill_log_decision → ski
 
 版本历史见 [CHANGELOG.md](./CHANGELOG.md)（Keep a Changelog 格式 + 语义化版本）。
 
-## License
+## 📄 许可证、安全与隐私 (License, Security & Privacy)
 
-[MIT](./LICENSE)
+- **许可证**：[MIT License](./LICENSE)
+- **安全政策**：[SECURITY.md](./SECURITY.md)
+- **隐私保护**：[PRIVACY.md](./PRIVACY.md)（零遥测、100% 本地运算）
 
 ---
 
