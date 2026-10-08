@@ -15,7 +15,7 @@ except ImportError:  # pragma: no cover
 
 from pathlib import Path
 
-REAL_SKILLS_ROOT = Path("C:/Users/31954/.agents/skills")
+REAL_SKILLS_ROOT = Path.home() / ".agents" / "skills"
 
 
 async def test_list_tools():

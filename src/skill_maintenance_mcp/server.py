@@ -8,13 +8,15 @@ from __future__ import annotations
 
 import sys
 
+from pathlib import Path
+
 from fastmcp import FastMCP
 
 from .corruption import scan_paths
 from .decisions import log_decision, read_decisions
 from .inventory import backup_skills, validate_skill
 
-DEFAULT_SKILLS_ROOT = "C:/Users/31954/.agents/skills"
+DEFAULT_SKILLS_ROOT = str(Path.home() / ".agents" / "skills")
 
 mcp = FastMCP(
     "skill-maintenance",

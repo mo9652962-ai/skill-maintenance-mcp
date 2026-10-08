@@ -116,7 +116,7 @@ uv run pytest -q    # 33 例；含对真实技能库的只读联动测试（无�
 | 参数 | 类型 | 必填 | 默认值 | 说明 |
 |:---|:---|:---|:---|:---|
 | `skill_names` | `list[str]` | 是 | — | 技能目录名列表（如 `["esq-question-bank-import"]`） |
-| `skills_root` | `str` | 否 | `C:/Users/31954/.agents/skills` | 技能库根目录（默认值为作者本机路径，跨机器部署建议显式传入） |
+| `skills_root` | `str` | 否 | `~/.agents/skills` | 技能库根目录（跨机器部署建议显式传入） |
 | `backup_root` | `str \| None` | 否 | `None` → `~/.agents/skill-backups` | 备份目标根 |
 
 返回 `{ok, backup_root, backed_up, errors}`；`ok=false` 时 `errors` 内含逐技能原因（目录不存在 / 今日已有同名备份）。
