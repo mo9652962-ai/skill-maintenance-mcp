@@ -23,6 +23,9 @@
     <a href="https://pypi.org/project/skill-maintenance-mcp/"><img src="https://img.shields.io/pypi/v/skill-maintenance-mcp?style=flat-square&color=2563EB" alt="PyPI"></a>
     <img src="https://img.shields.io/badge/coverage-100%25-success?style=flat-square" alt="coverage">
   </p>
+  <p>
+    <a href="https://mcprush.com/to/skill-maintenance-mcp?ref=badge"><img src="https://mcprush.com/badge/skill-maintenance-mcp/card.svg" alt="Skill Maintenance MCP server" width="380" height="200"></a>
+  </p>
 </div>
 
 <div align="center">

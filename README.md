@@ -29,6 +29,9 @@
     <img src="https://img.shields.io/badge/MCP_Registry-listed-a78bfa?style=flat-square" alt="MCP Registry">
     <img src="https://img.shields.io/badge/coverage-100%25-success?style=flat-square" alt="coverage">
   </p>
+  <p>
+    <a href="https://mcprush.com/to/skill-maintenance-mcp?ref=badge"><img src="https://mcprush.com/badge/skill-maintenance-mcp/card.svg" alt="Skill Maintenance MCP server" width="380" height="200"></a>
+  </p>
 </div>
 
 <div align="center">
